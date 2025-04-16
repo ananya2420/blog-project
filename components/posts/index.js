@@ -1,7 +1,5 @@
-import PostsGrid from "../../components/posts/post-grid";
+import AllPosts from "./all-posts";  // Assuming "all-posts" renders a list of posts
 
-
-// Assuming you have some dummy posts here, e.g.
 const DUMMY_POSTS = [
   {
     slug: "getting-started-with-nextjs",
@@ -33,14 +31,8 @@ const DUMMY_POSTS = [
   },
 ];
 
-function FeaturedPosts() {
-  return (
-    <section>
-      <h2>Featured Posts</h2>
-      {/* Pass the DUMMY_POSTS as the 'posts' prop */}
-      <PostsGrid posts={DUMMY_POSTS} />
-    </section>
-  );
+function AllPostsPage() {
+  return <AllPosts posts={DUMMY_POSTS} />;
 }
 
-export default FeaturedPosts;
+export default AllPostsPage;
